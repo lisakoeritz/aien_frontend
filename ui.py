@@ -71,7 +71,7 @@ def display_results(results):
                     </div>
                     """,
                     unsafe_allow_html=True,
-                    help="Source container"
+                    help=source["page_content"]
                 )
                 # Adding hover tooltip for each source context text
                 
