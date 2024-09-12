@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Set the FastAPI endpoint
-API_ENDPOINT = "http://localhost:8000/api/qa"
+API_ENDPOINT = st.secrets["api_endpoint"]
 
 # Streamlit Interface
 def main():
