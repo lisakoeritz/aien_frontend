@@ -12,12 +12,12 @@ def main():
     st.markdown("""
 Dieses prototypische Tool wurde im Rahmen des Projekts [**ANKER**](%s) am Internationalen Zentrum für Ethik in den Wissenschaften an der Universität Tübingen entwickelt.
 
-### Funktionen
-- Durchsucht den Inhalt von über **200 Ethikrichtlinien und -frameworks*.
+**Funktionen**
+- Durchsucht den Inhalt von über **200 Ethikrichtlinien und -frameworks**.
 - Bietet eine automatisch generierte Volltextantwort auf gestellte Fragen.
 - Stellt die relevantesten Textausschnitte mit Metadaten bereit.
 
-### Hinweise
+**Hinweise**
 - Fragen müssen in der aktuellen Version **in englischer Sprache** formuliert werden.
 - Durch ein Fragezeichen neben den Quellen können die ausgewählten Textausschnitte eingesehen werden. 
 - Textausschnitte sind aktuell für den prototypischen Anwendungsfall absichtlich kurz gehalten.
