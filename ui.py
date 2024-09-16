@@ -3,13 +3,29 @@ import requests
 
 # Set the FastAPI endpoint
 API_ENDPOINT = st.secrets["api_endpoint"]
+ANKER_URL = "https://uni-tuebingen.de/de/257900"
 
 # Streamlit Interface
 def main():
     st.title("AI Ethics Navigator")
+
+    st.markdown("""
+Dieses prototypische Tool wurde im Rahmen des Projekts [**ANKER**](%s) am Internationalen Zentrum für Ethik in den Wissenschaften an der Universität Tübingen entwickelt.
+
+### Funktionen
+- Durchsucht den Inhalt von über **200 Ethikrichtlinien und -frameworks*.
+- Bietet eine automatisch generierte Volltextantwort auf gestellte Fragen.
+- Stellt die relevantesten Textausschnitte mit Metadaten bereit.
+
+### Hinweise
+- Fragen müssen in der aktuellen Version **in englischer Sprache** formuliert werden.
+- Durch ein Fragezeichen neben den Quellen können die ausgewählten Textausschnitte eingesehen werden. 
+- Textausschnitte sind aktuell für den prototypischen Anwendungsfall absichtlich kurz gehalten.
+""" % ANKER_URL)
+
     
     # Input field for the search query
-    query = st.text_input("Enter your search query:", "")
+    query = st.text_area("Enter your search query:", "", height=100)
     
     # Search button
     if st.button("Search"):
@@ -29,6 +45,7 @@ def main():
                     st.error(f"Error: {response.status_code} - {response.text}")
         else:
             st.warning("Please enter a search query.")
+
 
 # def display_results(results):
 #     # Display each result
