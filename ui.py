@@ -25,7 +25,7 @@ Dieses prototypische Tool wurde im Rahmen des Projekts [**ANKER**](%s) am Intern
 
     
     # Input field for the search query
-    query = st.text_input("Enter your question here:")
+    query = st.text_input("Enter your search query here:")
     
     # Search button
     if st.button("Search"):
