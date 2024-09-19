@@ -25,7 +25,7 @@ Dieses prototypische Tool wurde im Rahmen des Projekts [**ANKER**](%s) am Intern
 
     
     # Input field for the search query
-    query = st.text_area("Enter your search query:", "", height=100)
+    query = st.text_area("Enter your search query:", "", height=50)
     
     # Search button
     if st.button("Search"):
