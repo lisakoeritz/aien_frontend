@@ -15,7 +15,7 @@ Dieses prototypische Tool wurde im Rahmen des Projekts [**ANKER**](%s) am Intern
 **Funktionen**
 - Durchsucht den Inhalt von über **200 Ethikrichtlinien und -frameworks**.
 - Bietet eine automatisch generierte Volltextantwort auf gestellte Fragen.
-- Stellt die relevantesten Textausschnitte mit Metadaten bereit.
+- Stellt die relevantesten Quellen mit Metadaten bereit.
 
 **Hinweise**
 - Fragen müssen in der aktuellen Version **in englischer Sprache** formuliert werden.
@@ -25,7 +25,7 @@ Dieses prototypische Tool wurde im Rahmen des Projekts [**ANKER**](%s) am Intern
 
     
     # Input field for the search query
-    query = st.text_area("Enter your search query:", "", height=50)
+    query = st.text_input("Enter your question here:")
     
     # Search button
     if st.button("Search"):
