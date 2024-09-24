@@ -3,6 +3,7 @@ import requests
 
 # Set the FastAPI endpoint
 API_ENDPOINT = st.secrets["api_endpoint"]
+AUTH_TOKEN = st.secrets["auth_token"]
 ANKER_URL = "https://uni-tuebingen.de/de/257900"
 
 # Streamlit Interface
@@ -33,8 +34,9 @@ Dieses prototypische Tool wurde im Rahmen des Projekts [**ANKER**](%s) am Intern
             # Display the loading spinner
             with st.spinner("Searching..."):
                 # Send the query to the FastAPI backend
+                headers = {'Authorization': f'Bearer {AUTH_TOKEN}'}
                 payload = {"question": query}
-                response = requests.post(API_ENDPOINT, json=payload)
+                response = requests.post(API_ENDPOINT, json=payload, headers=headers)
                 
                 # Check the response status
                 if response.status_code == 200:
